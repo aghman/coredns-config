@@ -1,0 +1,9 @@
+$ORIGIN domain.web.      ; designates the start of this zone file in the namespace
+$TTL 3600                ; default expiration time (in seconds) of all RRs without their own TTL value
+domain.web.              IN  SOA   ns.domain.web. it.domain.web. ( 2020091029 7200 3600 1209600 3600 ) ; SERIAL REFRESH RETRY EXPIRE TTL
+domain.web.              IN  NS    ns                    ; ns.domain.web is a nameserver for domain.web
+ns.domain.web.	         IN  A     192.168.0.150
+blog.domain.web.         IN  A     192.168.0.145
+grafana.domain.web.      IN  A     192.168.0.146
+prometheus.domain.web.   IN  A     192.168.0.147
+beta.domain.web.         IN  A     10.100.0.110
