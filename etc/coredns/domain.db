@@ -1,0 +1,7 @@
+$ORIGIN domain.db.     ; designates the start of this zone file in the namespace
+$TTL 3600                ; default expiration time (in seconds) of all RRs without their own TTL value
+domain.db.              IN  SOA   ns.domain.db. it.domain.db. ( 2020091025 7200 3600 1209600 3600 ) ; SERIAL REFRESH RETRY EXPIRE TTL
+domain.db.              IN  NS    ns                    ; ns.domain.db is a nameserver for domain.db
+ns.domain.db.	      IN  A     192.168.0.150
+devs.domain.db.      IN  A     10.100.0.150
+beta.domain.db.        IN  A     192.168.0.151
