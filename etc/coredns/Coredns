@@ -1,0 +1,22 @@
+domain.web:53 {
+    log
+    whoami
+    reload
+    root /etc/coredns
+    file domain.web {
+        reload 30s
+    }
+}
+domain.db:53 {
+    log
+    whoami
+    reload
+    root /etc/coredns
+    file domain.db
+}
+.:53 {
+    forward . 1.1.1.1 8.8.8.8 {
+        except domain.intra
+        except domain.db
+    }
+}
