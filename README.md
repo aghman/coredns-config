@@ -16,6 +16,6 @@ chown -R coredns:coredns /etc/coredns
 vim /etc/coredns/Corefile
 touch /etc/coredns/domain.web
 chown -R coredns:coredns /etc/coredns
-sudo systemctl enable coredns
-sudo systemctl start coredns 
+systemctl enable coredns
+systemctl start coredns 
 ```
