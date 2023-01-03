@@ -1,9 +1,12 @@
-$ORIGIN domain.web.      ; designates the start of this zone file in the namespace
+$ORIGIN local.      ; designates the start of this zone file in the namespace
 $TTL 3600                ; default expiration time (in seconds) of all RRs without their own TTL value
-domain.web.              IN  SOA   ns.domain.web. it.domain.web. ( 2020091029 7200 3600 1209600 3600 ) ; SERIAL REFRESH RETRY EXPIRE TTL
-domain.web.              IN  NS    ns                    ; ns.domain.web is a nameserver for domain.web
-ns.domain.web.	         IN  A     192.168.0.150
-blog.domain.web.         IN  A     192.168.0.145
-grafana.domain.web.      IN  A     192.168.0.146
-prometheus.domain.web.   IN  A     192.168.0.147
-beta.domain.web.         IN  A     10.100.0.110
+local.              IN  SOA   ns.local. it.local. ( 2020091029 7200 3600 1209600 3600 ) ; SERIAL REFRESH RETRY EXPIRE TTL
+local.              IN  NS    ns                    ; ns.local is a nameserver for local
+ns.local.                IN  A     192.168.0.41
+mqtt.local.              IN  A     192.168.0.41
+venezia.local.           IN  A     192.168.0.41
+gitlab.local.            IN  A     192.168.0.41
+influxdb.local.      IN  A     192.168.0.41
+macmini.local.       IN  A     192.168.0.27
+garlic.local.        IN  A     192.168.0.50
+scanner.local.       IN  A     192.168.0.50
