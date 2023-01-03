@@ -10,7 +10,7 @@ cp coredns /usr/bin/
 mkdir /etc/coredns
 vim /etc/systemd/system/coredns.service
 vim /etc/coredns/Corefile
-vim /etc/coredns/domain.web
+vim /etc/coredns/local
 chown -R coredns:coredns /etc/coredns
 systemctl enable coredns
 systemctl start coredns 
